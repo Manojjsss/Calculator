@@ -1,23 +1,23 @@
 import java.util.Scanner;
 
-public class square {
+public class Square {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
-        // Input number from the user
+       
         System.out.print("Enter a number: ");
-        int number = scanner.nextInt();
-        
-        // Calculate square
-        int square = number * number;
-        
-        // Calculate cube
-        int cube = number * number * number;
-        
-        // Display results
-        System.out.println("Square of " + number + " is: " + square);
-        System.out.println("Cube of " + number + " is: " + cube);
-        
+        // Check if there is input available
+        if (scanner.hasNextInt()) {
+            int number = scanner.nextInt();
+       
+            int square = number * number;
+            int cube = number * number * number;
+           
+            System.out.println("Square of " + number + " is: " + square);
+            System.out.println("Cube of " + number + " is: " + cube);
+        } else {
+            System.out.println("Please enter a valid number.");
+        }
+       
         scanner.close();
     }
 }
